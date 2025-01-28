@@ -45,7 +45,7 @@ try:
 
     tickers = {
         'apple': 'AAPL',
-        'facebook': 'FB',
+        'facebook': 'META',  # Facebookのティッカーを更新
         'google': 'GOOGL',
         'microsoft': 'MSFT',
         'netflix': 'NFLX',
@@ -77,7 +77,5 @@ try:
             )
         )
         st.altair_chart(chart, use_container_width=True)
-except:
-    st.error(
-        "おっと！なにかエラーが起きているようです。"
-    )
+except Exception as e:
+    st.error(f"エラーが発生しました: {e}")
